@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Panel de Administracion</title>
+        <link href="../assets/css/styles.css" rel="stylesheet" />
+
+        <link
+        rel="stylesheet"
+        
+        href="../assets/css/dataTables.bootstrap5.min.css"
+      />
+      <link
+        rel="stylesheet"
+   
+        href="../assets/css/buttons.bootstrap5.min.css"
+      />
+     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+      <!-- Font Awesome -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+        <script src="../assets/js/all.min.js" ></script>
+    </head>
+    <body class="sb-nav-fixed" onload="cargarNombre(); ">
+       
+         
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+            <div class="container-fluid">
+         
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="2"><path d="M5 5L12 12L19 5"><animate fill="freeze" attributeName="d" dur="0.4s" values="M5 5L12 12L19 5;M5 5L12 5L19 5"/></path><path d="M12 12H12"><animate fill="freeze" attributeName="d" dur="0.4s" values="M12 12H12;M5 12H19"/></path><path d="M5 19L12 12L19 19"><animate fill="freeze" attributeName="d" dur="0.4s" values="M5 19L12 12L19 19;M5 19L12 19L19 19"/></path></g></svg>
+              </button>
+              <h1 class="navbar-brand m-auto "> <img src="../assets/img/encabezado.png" id="logo"  class="d-inline-block align-top">  </h1>
+        
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        
+                <div class="offcanvas-header">
+        
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+        
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        
+        
+                </div>
+        
+             
+        
+        
+        
+        
+                       
+                    <div class="offcanvas-body">
+            
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    
+                          <div class="text-center">
+                            <a class="nav-link active"  aria-current="page" href="./perfil.html"><img src="../assets/img/usuario.png" alt="" id="perfil"  > <br>
+                              <span id="user"></span>
+                            </a>
+                          </div>
+
+                         
+
+                       
+                            <div class="sb-nav-link-icon">
+            <a class="nav-link" href="./inicio.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M6.906.384a1.75 1.75 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019a1.75 1.75 0 0 1-1.75 1.75h-2.5a.75.75 0 0 1-.75-.75V8.72H6v5.25a.75.75 0 0 1-.75.75h-2.5A1.75 1.75 0 0 1 1 12.97V5.95c0-.531.242-1.034.657-1.366z"/></svg>
+                                    Inicio
+            </a>
+                            </div>
+                        
+                            <div class="sb-nav-link-icon">
+                              <a class="nav-link" href="./nuevaVisita.html">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M6.906.384a1.75 1.75 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019a1.75 1.75 0 0 1-1.75 1.75h-2.5a.75.75 0 0 1-.75-.75V8.72H6v5.25a.75.75 0 0 1-.75.75h-2.5A1.75 1.75 0 0 1 1 12.97V5.95c0-.531.242-1.034.657-1.366z"/></svg>
+                                                      Nueva Visita
+                              </a>
+                                              </div>
+
+
+                            <div class="sb-nav-link-icon">
+                            <a class="nav-link" href="./miembro.html">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16 14a5 5 0 0 1 5 5v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a5 5 0 0 1 5-5zm4-6a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1V9a1 1 0 0 1 1-1m-8-6a5 5 0 1 1 0 10a5 5 0 0 1 0-10"/></g></svg>
+                               Miembros
+                            </a>
+                        </div>     
+                            
+                        <div class="sb-nav-link-icon">
+                            <a class="nav-link" href="./membresias.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M20 2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h4v5l4-2l4 2v-5h4c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m0 13H4v-2h16zm0-5H4V4h16z"/></svg>
+                               Membresias
+                            </a>
+                        </div>
+
+
+                        <div class="sb-nav-link-icon">
+                          <a class="nav-link active" onclick="salir();" aria-current="page" href="#"><svg
+                              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-box-arrow-right" viewBox="0 0 16 16" id="btnSalir">
+                              <path fill-rule="evenodd"
+                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+          
+                              <path fill-rule="evenodd"
+                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                            </svg> Cerrar sesión</a>
+                          </div>
+                      
+                        </ul>
+
+       <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                  <span id="user2"></span>
+                    </div>
+                </nav>
+            </div>      
+        
+            
+        
+        
+        
+        
+            </div><div id="layoutSidenav_content">
+             
+                <div class="container-fluid">
+                   
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Visita</li>
+                    </ol>
+
+                   
+  <div class="container " style="margin-top: 100px;">
+
+    <div class="card text-center">
+
+        <div class="card-header">
+
+
+        </div>
+
+        <div class="card-body">
+
+            <div style="text-align: left;" class="mb-2">
+                <a href="./agregarV.html">
+                <button type="button" class="btn btn-outline-success"  data-bs-toggle="modal" data-bs-target="#AgregarM">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><path fill="black" d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2zm-1 11a10 10 0 1 1 0-20a10 10 0 0 1 0 20m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16"/></svg>
+             Registrar Visita</button></a>
+                
+            </div>
+            <div class="container my-5">
+                <div class="row">
+                  <table id="tablevisitas" class="table table-striped table-dark table-hover"  >
+                    <caption>
+                        designed and created by Mares
+                    </caption>
+                    <thead>
+                      <tr>
+                       
+                        <th class="centered">ID</th>
+                        <th class="centered">Nombre</th>
+                        <th class="centered">Precio</th>
+                        <th class="centered">Fecha</th>
+                        <th class="centered">Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody id="visitas"></tbody>
+                  </table>
+                </div>
+              </div>
+              <input type="hidden" id="id">
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Design by Mares &copy;  2024</div>
+                        <div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar membresia</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <form id="actualizar">
+        <div class="mb-3">
+
+    <label for="Nombre"  class="form-label">NOMBRE DE LA MEMBRESIA</label><br>
+    <input type="text" placeholder="Nombre de la membresia" class="form-control"  id="nom"><br>
+        </div>
+        <div class="mb-3">
+            <label for="Duracion"  class="form-label">Duracion</label><br>
+            <input type="number" class="form-control"  placeholder="Duracion de la membresia" id="dura"><br>
+        </div>
+        <div class="mb-3">
+            <label for="Precio" class="form-label">Precio de la  Membresia</label><br>
+            <input type="number" class="form-control" placeholder="Precio de la  Membresia" id="pre"><br>
+
+            <input type="hidden" id="id">
+
+        </div>
+    </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="black" fill-rule="evenodd" d="M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9 1.414l-3.293 3.293l-1.414-1.414L10.586 12L7.293 8.707l1.414-1.414L12 10.586l3.293-3.293l1.414 1.414L13.414 12l3.293 3.293l-1.414 1.414z" clip-rule="evenodd"/></svg>
+        Cerrar</button>
+      <button type="button" onclick="editarmem();" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="14" stroke-dashoffset="14" d="M6 19h12"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.4s" values="14;0"/></path><path stroke-dasharray="18" stroke-dashoffset="18" d="M12 15 h2 v-6 h2.5 L12 4.5M12 15 h-2 v-6 h-2.5 L12 4.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="18;0"/><animate attributeName="d" calcMode="linear" dur="1.5s" keyTimes="0;0.7;1" repeatCount="indefinite" values="M12 15 h2 v-6 h2.5 L12 4.5M12 15 h-2 v-6 h-2.5 L12 4.5;M12 15 h2 v-3 h2.5 L12 7.5M12 15 h-2 v-3 h-2.5 L12 7.5;M12 15 h2 v-6 h2.5 L12 4.5M12 15 h-2 v-6 h-2.5 L12 4.5"/></path></g></svg>
+       Guardar cambios</button>
+    </div>
+  </div>
+</div>
+</div>
+   
+    <script src="../assets/js/bootstrap.bundle.min.js" ></script>
+
+    <!-- GRAFICAS     
+     <script src="../assets/js/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="../assets/demo/chart-area-demo.js"></script>
+    <script src="../assets/demo/chart-bar-demo.js"></script>
+    -->
+<script src="../assets/js/sweetalert2.all.min.js"></script>
+       <!-- JQuery -->
+<script
+src="../assets/js/jquery.min.js"
+></script>
+<!-- DataTable -->
+<script
+
+src="../assets/js/jszip.min.js"
+></script>
+<script
+
+src="../assets/js/pdfmake.min.js"
+></script>
+<script
+
+src="../assets/js/vfs_fonts.js"
+></script>
+<script
+
+src="../assets/js/jquery.dataTables.min.js"
+></script>
+<script
+
+src="../assets/js/dataTables.bootstrap5.min.js"
+></script>
+<script
+
+src="../assets/js/dataTables.buttons.min.js"
+></script>
+<script
+type="text/javascript"
+src="../assets/js/buttons.bootstrap5.min.js"
+></script>
+<script
+
+src="../assets/js/buttons.html5.min.js"
+></script>
+<script
+
+src="../assets/js/buttons.print.min.js"
+></script>
+<script src="../assets/js/inicio.js"></script>
+
+<script src="../assets/js/funcionVisitas.js"></script>
+
+</body>
+</html>
+
+    </body>
+</html>

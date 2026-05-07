@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Panel de Administracion</title>
+        <link href="../assets/css/styles.css" rel="stylesheet" />   
+     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  
+        <script src="../assets/js/all.min.js" ></script>
+    </head>
+    <body class="sb-nav-fixed" onload="cargarNombre();">
+        
+         
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+        <div class="container-fluid">
+     
+
+            <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="2"><path d="M5 5L12 12L19 5"><animate fill="freeze" attributeName="d" dur="0.4s" values="M5 5L12 12L19 5;M5 5L12 5L19 5"/></path><path d="M12 12H12"><animate fill="freeze" attributeName="d" dur="0.4s" values="M12 12H12;M5 12H19"/></path><path d="M5 19L12 12L19 19"><animate fill="freeze" attributeName="d" dur="0.4s" values="M5 19L12 12L19 19;M5 19L12 19L19 19"/></path></g></svg>
+    
+        </a>
+          <h1 class="navbar-brand m-auto "> <img src="../assets/img/encabezado.png" id="logo"  class="d-inline-block align-top"  onclick="cargarPerfil()">  </h1>
+        
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+            <div class="offcanvas-header">
+    
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+    
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
+    
+    
+            </div>
+    
+         
+    
+    
+    
+    
+                   
+                <div class="offcanvas-body">
+        
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <div class="text-center">
+                            <a class="nav-link active"  aria-current="page" href="#"><img src="../assets/img/usuario.png" alt="" id="perfil"> <br>
+                                <span id="user"></span>
+                            </a>
+                          </div>
+                   
+                        <div class="sb-nav-link-icon">
+        <a class="nav-link" href="./inicio.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M6.906.384a1.75 1.75 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019a1.75 1.75 0 0 1-1.75 1.75h-2.5a.75.75 0 0 1-.75-.75V8.72H6v5.25a.75.75 0 0 1-.75.75h-2.5A1.75 1.75 0 0 1 1 12.97V5.95c0-.531.242-1.034.657-1.366z"/></svg>
+                                Inicio
+        </a>
+                        </div>
+
+
+                        
+                        <div class="sb-nav-link-icon">
+                            <a class="nav-link" href="./nuevaVisita.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M6.906.384a1.75 1.75 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019a1.75 1.75 0 0 1-1.75 1.75h-2.5a.75.75 0 0 1-.75-.75V8.72H6v5.25a.75.75 0 0 1-.75.75h-2.5A1.75 1.75 0 0 1 1 12.97V5.95c0-.531.242-1.034.657-1.366z"/></svg>
+                                                    Nueva Visita
+                            </a>
+                                            </div>
+                    
+                        <div class="sb-nav-link-icon">
+                        <a class="nav-link" href="./miembro.html">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16 14a5 5 0 0 1 5 5v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a5 5 0 0 1 5-5zm4-6a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1V9a1 1 0 0 1 1-1m-8-6a5 5 0 1 1 0 10a5 5 0 0 1 0-10"/></g></svg>
+                           Miembros
+                        </a>
+                    </div>     
+                        
+                    <div class="sb-nav-link-icon">
+                        <a class="nav-link" href="./membresias.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M20 2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h4v5l4-2l4 2v-5h4c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2m0 13H4v-2h16zm0-5H4V4h16z"/></svg>
+                           Membresias
+                        </a>
+                    </div>
+                    <div class="sb-nav-link-icon">
+                        <a class="nav-link active" onclick="salir();" aria-current="page" href="#"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-right" viewBox="0 0 16 16" id="btnSalir">
+                            <path fill-rule="evenodd"
+                              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+        
+                            <path fill-rule="evenodd"
+                              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                          </svg> Cerrar sesión</a>
+                        </div>
+
+
+                    </ul>
+
+   <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+              <span id="user2"></span>
+                </div>
+            </nav>
+        </div>      
+    
+        
+    
+    
+    
+    
+        </div><div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                       
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">AGREGAR MEMBRESIAS</li>
+                        </ol>
+
+                       
+      <div class="container " style="margin-top: 100px;">
+
+        <div class="card text-center">
+
+            <div class="card-header">
+
+
+            </div>
+
+            <div class="card-body">
+<form action="" id="formAgregar">
+                <div style="text-align: left;" class="mb-2">
+                  
+                        <label for="NOMBRE" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><circle cx="24" cy="11" r="7" fill="black"/><path d="M4 41c0-8.837 8.059-16 18-16"/><path fill="black" d="m31 42l10-10l-4-4l-10 10v4z"/></g></svg>Nombre de la membresia</label><br>
+                 <input type="text" placeholder="Nombre de la membresia" id="mem"  class="form-control" id="floatingInput"><br>
+<label for="Apellido"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><g fill="none"><rect width="18" height="15" x="3" y="6" stroke="black" rx="2"/><path fill="black" d="M3 10c0-1.886 0-2.828.586-3.414C4.172 6 5.114 6 7 6h10c1.886 0 2.828 0 3.414.586C21 7.172 21 8.114 21 10z"/><path stroke="black" stroke-linecap="round" d="M7 3v3m10-3v3"/></g></svg>Duracion</label>
+                <input type="numer" name="dura" placeholder="Duracion" id="dura"  class="form-control" id="floatingInput">
+              <br>
+              <label for="Telefono"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 56 56"><path fill="black" fill-rule="evenodd" d="M29 30v10c3.519-.316 5-2.287 5-4.89c0-2.507-1.152-3.99-5-5.11m-3-5v-9c-3.273.415-5 2.33-5 4.43c0 2.1 1.364 3.647 5 4.57m2.84.737l1.072.277C35.784 27.423 39 29.917 39 34.836c0 5.658-4.466 8.868-10.16 9.284V48h-2.523v-3.88c-5.672-.439-10.16-3.741-10.317-9.284h4.622c.402 2.702 2.1 4.688 5.695 5.08V29.849l-.916-.231c-5.672-1.363-8.731-3.996-8.731-8.684c0-5.173 4.02-8.591 9.647-9.03V8h2.523v3.903c5.582.462 9.624 3.926 9.803 9.169h-4.645c-.29-2.91-2.3-4.596-5.158-4.966z"/></svg>Precio</label><br>
+              <input type="number" placeholder="Precio" id="pre" class="form-control" id="floatingInput"><br>
+
+<div  style="text-align: right;">
+    <a type="button" href="./membresias.html" class="btn btn-danger" >Cancelar</a>
+    <button  type="button" class="btn btn-success" onclick="addmem();">Guardar</button>
+            
+    </div>
+            </div>
+</form>
+                </div>
+
+               
+                       
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Design by Mares &copy;  2024</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="../assets/js/inicio.js"></script>
+
+        <script src="../assets/js/funcionesmem.js"></script>  
+        <script src="../assets/js/bootstrap.bundle.min.js" ></script>
+       
+        <!-- GRAFICAS     
+         <script src="../assets/js/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="../assets/demo/chart-area-demo.js"></script>
+        <script src="../assets/demo/chart-bar-demo.js"></script>
+        -->
+    <script src="../assets/js/sweetalert2.all.min.js"></script>
+           <!-- JQuery -->
+    
+    
+
+    </body>
+</html>
